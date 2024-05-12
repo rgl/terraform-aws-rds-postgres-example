@@ -30,7 +30,7 @@ resource "aws_db_instance" "example" {
   instance_class         = "db.t3.micro"
   username               = "postgres" # NB cannot be admin.
   password               = random_password.example_db_admin_password.result
-  storage_type           = "gp2"
+  storage_type           = "gp3"
   allocated_storage      = 20 # [GiB]. min 20 (for ssd based storage_type).
   skip_final_snapshot    = true
   apply_immediately      = true
