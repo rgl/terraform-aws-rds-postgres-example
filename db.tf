@@ -26,7 +26,7 @@ resource "aws_db_instance" "example" {
   vpc_security_group_ids = [aws_security_group.db.id]
   identifier             = var.name_prefix
   engine                 = "postgres"
-  engine_version         = "16.2"
+  engine_version         = "16.3"
   instance_class         = "db.t3.micro"
   username               = "postgres" # NB cannot be admin.
   password               = random_password.example_db_admin_password.result
