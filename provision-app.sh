@@ -224,7 +224,13 @@ async function main() {
 
 await main();
 EOF
-cat >package.json <<'EOF'
+# see https://www.npmjs.com/package/@aws-sdk/client-ssm
+# renovate: datasource=npm depName=@aws-sdk/client-ssm
+npm_aws_sdk_client_ssm_version='3.574.0'
+# see https://www.npmjs.com/package/postgres
+# renovate: datasource=npm depName=postgres
+npm_postgres_version='3.4.4'
+cat >package.json <<EOF
 {
     "name": "app",
     "description": "example application",
@@ -233,8 +239,8 @@ cat >package.json <<'EOF'
     "type": "module",
     "main": "main.js",
     "dependencies": {
-        "@aws-sdk/client-ssm": "3.564.0",
-        "postgres": "3.4.4"
+        "@aws-sdk/client-ssm": "$npm_aws_sdk_client_ssm_version",
+        "postgres": "$npm_postgres_version"
     }
 }
 EOF

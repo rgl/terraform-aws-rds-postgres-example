@@ -8,7 +8,7 @@ sudo apt-get install -y apt-transport-https make unzip jq
 # see https://www.terraform.io/downloads.html
 # see https://github.com/hashicorp/terraform/releases
 # renovate: datasource=github-releases depName=hashicorp/terraform
-terraform_version='1.8.2'
+terraform_version='1.8.3'
 artifact_url="https://releases.hashicorp.com/terraform/$terraform_version/terraform_${terraform_version}_linux_amd64.zip"
 artifact_path="/tmp/$(basename $artifact_url)"
 wget -qO $artifact_path $artifact_url
@@ -22,7 +22,7 @@ CHECKPOINT_DISABLE=1 terraform version
 # see https://github.com/aws/aws-cli/tags
 # see https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html#cliv2-linux-install
 # renovate: datasource=github-tags depName=aws/aws-cli
-AWS_VERSION='2.15.44'
+AWS_VERSION='2.15.48'
 aws_url="https://awscli.amazonaws.com/awscli-exe-linux-x86_64-${AWS_VERSION}.zip"
 t="$(mktemp -q -d --suffix=.aws)"
 wget -qO "$t/awscli.zip" "$aws_url"
