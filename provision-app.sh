@@ -226,7 +226,7 @@ await main();
 EOF
 # see https://www.npmjs.com/package/@aws-sdk/client-ssm
 # renovate: datasource=npm depName=@aws-sdk/client-ssm
-npm_aws_sdk_client_ssm_version='3.574.0'
+npm_aws_sdk_client_ssm_version='3.600.0'
 # see https://www.npmjs.com/package/postgres
 # renovate: datasource=npm depName=postgres
 npm_postgres_version='3.4.4'
