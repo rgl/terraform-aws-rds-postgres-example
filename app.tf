@@ -190,6 +190,6 @@ resource "aws_instance" "app" {
     device_index         = 0
   }
   tags = {
-    Name = "example-ubuntu"
+    Name = "${var.name_prefix}-app"
   }
 }
