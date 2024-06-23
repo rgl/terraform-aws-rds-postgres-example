@@ -273,7 +273,17 @@ EOF
 while true; do
     postgres_connection_string="$(node /opt/app/main.js get-postges-connection-string || true)"
     if [ -n "$postgres_connection_string" ]; then
-        break
+        postgres_result="$(psql \
+            --no-password \
+            --tuples-only \
+            --csv \
+            --variable ON_ERROR_STOP=1 \
+            --command "select 'ready'" \
+            "$postgres_connection_string" \
+            || true)"
+        if [ "$postgres_result" = "ready" ]; then
+            break
+        fi
     fi
     sleep 15
 done
