@@ -2,7 +2,9 @@
 
 [![Lint](https://github.com/rgl/terraform-aws-rds-postgres-example/actions/workflows/lint.yml/badge.svg)](https://github.com/rgl/terraform-aws-rds-postgres-example/actions/workflows/lint.yml)
 
-An example Amazon RDS for PostgreSQL database that can be used from an AWS EC2 Ubuntu Virtual Machine.
+An example [Amazon RDS for PostgreSQL](https://aws.amazon.com/rds/postgresql/) database that can be used from an AWS EC2 Ubuntu Virtual Machine.
+
+**NB** For an [Amazon RDS Aurora PostgreSQL](https://aws.amazon.com/rds/aurora/) example see the [rgl/terraform-aws-rds-aurora-postgres-example repository](https://github.com/rgl/terraform-aws-rds-aurora-postgres-example).
 
 This will:
 
